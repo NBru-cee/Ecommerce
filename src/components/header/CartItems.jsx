@@ -1,9 +1,34 @@
 import React from "react";
-
-const CartItems = () => {
+import { AiOutlineClose, AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+const CartItems = ({ id, cover, price, quantity, totalPrice, name }) => {
     return (
         <>
-            <h1>CartItems</h1>
+            <div className="cardList" key={id}>
+                <div className="cartContent">
+                    <div className="img">
+                        <img src={cover} alt="image" />
+                        <button className="remove flexCenter">
+                            <AiOutlineClose />
+                        </button>
+                    </div>
+                    <div className="details">
+                        <p>{name}</p>
+                        <label>Unit Price ${price}</label>
+                        <div className="price">
+                            <div className="qty flexCenter">
+                                <button className="plus">
+                                    <AiOutlinePlus />
+                                </button>
+                                <button className="num">{quantity}</button>
+                                <button className="minus">
+                                    <AiOutlineMinus />
+                                </button>
+                            </div>
+                            <div className="priceTitle">${totalPrice}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.css";
 import Medicine from "../../assets/images/Medicine.svg";
+import { Link } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import Card from "./Card";
 import User from "./User";
@@ -17,7 +18,9 @@ const Header = () => {
             <header className="header">
                 <div className="scontainer flex">
                     <div className="logo">
-                        <img src={Medicine} alt="medicine" />
+                        <Link to="/">
+                            <img src={Medicine} alt="medicine" />
+                        </Link>
                     </div>
                     <div className="search flex">
                         <AiOutlineSearch className="searchIcon" />
