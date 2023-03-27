@@ -1,7 +1,25 @@
 import React from "react";
-
-const ProductCart = () => {
-    return <div>ProductCart</div>;
+import { Link } from "react-router-dom";
+import { AiOutlinePlusCircle } from "react-icons/ai";
+const ProductCart = ({ id, name, cover, price }) => {
+    return (
+        <>
+            <div className="box boxItems" id="product">
+                <div className="img">
+                    <Link>
+                        <img src={cover} alt="cover" />
+                    </Link>
+                </div>
+                <div className="details">
+                    <h3>${price}</h3>
+                    <p>{name}</p>
+                    <button>
+                        <AiOutlinePlusCircle />
+                    </button>
+                </div>
+            </div>
+        </>
+    );
 };
 
 export default ProductCart;

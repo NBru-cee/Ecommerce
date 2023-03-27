@@ -4,6 +4,7 @@ import { BsBagCheck } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 import { GrHelp } from "react-icons/gr";
 import { BiLogOut } from "react-icons/bi";
+import { Link } from "react-router-dom";
 const User = () => {
     const [profileOpen, setProfileOpen] = useState(false);
     const user = true;
@@ -31,12 +32,14 @@ const User = () => {
                                 onClick={close}
                             >
                                 <div className="image">
-                                    <div className="img">
-                                        <img
-                                            src="https://cdn-icons-png.flaticon.com/512/2202/2202112.png"
-                                            alt="user"
-                                        />
-                                    </div>
+                                    <Link to="/account">
+                                        <div className="img">
+                                            <img
+                                                src="https://cdn-icons-png.flaticon.com/512/2202/2202112.png"
+                                                alt="user"
+                                            />
+                                        </div>
+                                    </Link>
                                     <div className="text">
                                         <h4>Bruce Smith</h4>
                                         <label htmlFor="">
@@ -44,10 +47,12 @@ const User = () => {
                                         </label>
                                     </div>
                                 </div>
-                                <button className="box">
-                                    <IoMdSettings className="icon" />
-                                    <h4>My Account</h4>
-                                </button>
+                                <Link to="/login">
+                                    <button className="box">
+                                        <IoMdSettings className="icon" />
+                                        <h4>My Account</h4>
+                                    </button>
+                                </Link>
                                 <button className="box">
                                     <BsBagCheck className="icon" />
                                     <h4>My Order</h4>
@@ -60,10 +65,12 @@ const User = () => {
                                     <GrHelp className="icon" />
                                     <h4>Help</h4>
                                 </button>
-                                <button className="box">
-                                    <BiLogOut className="icon" />
-                                    <h4>Logout</h4>
-                                </button>
+                                <Link to="/register">
+                                    <button className="box">
+                                        <BiLogOut className="icon" />
+                                        <h4>Logout</h4>
+                                    </button>
+                                </Link>
                             </div>
                         )}
                     </>
