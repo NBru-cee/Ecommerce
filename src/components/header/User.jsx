@@ -40,7 +40,7 @@ const User = () => {
                                     <div className="text">
                                         <h4>Bruce Smith</h4>
                                         <label htmlFor="">
-                                            Los Angeles, CA
+                                            Mukamira, Nyabihu
                                         </label>
                                     </div>
                                 </div>

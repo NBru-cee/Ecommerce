@@ -1,9 +1,9 @@
 import React from "react";
 import { AiOutlineClose, AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
-const CartItems = ({ id, cover, price, quantity, totalPrice, name }) => {
+const CartItems = ({  cover, price, quantity, totalPrice, name }) => {
     return (
         <>
-            <div className="cardList" key={id}>
+            <div className="cardList">
                 <div className="cartContent">
                     <div className="img">
                         <img src={cover} alt="image" />
