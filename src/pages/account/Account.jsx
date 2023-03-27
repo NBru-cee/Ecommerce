@@ -1,6 +1,7 @@
 import React from "react";
 import "./account.css";
 import image from "../../assets/images/input.png";
+import { Link } from "react-router-dom";
 const Account = () => {
     document.title = "Account";
     return (
