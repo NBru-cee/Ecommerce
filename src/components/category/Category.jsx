@@ -7,7 +7,6 @@ import { GrFormPrevious } from "react-icons/gr";
 import { MdNavigateNext } from "react-icons/md";
 import { category } from "../../assets/data/data";
 
-consoleMessage();
 function SampleNextArrow(props) {
     const { onClick } = props;
     return (
@@ -22,7 +21,7 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
     const { onClick } = props;
     return (
-        <div className="control-button" onClick={onClick}>
+        <div className="control-btn" onClick={onClick}>
             <div className="prev">
                 <GrFormPrevious className="icon" />
             </div>

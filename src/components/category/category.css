@@ -49,11 +49,11 @@
     position: absolute;
     top: 40%;
     left: -20px;
-
+    z-index: 99;
 }
 
 .control-btn .icon {
-    font-size: 25px;
+    font-size: 30px;
 }
 
 /*---------------control-btn-------------*/
