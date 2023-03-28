@@ -28,6 +28,7 @@ function SamplePrevArrow(props) {
         </div>
     );
 }
+
 const Category = () => {
     const settings = {
         dots: false,
@@ -42,7 +43,7 @@ const Category = () => {
                 breakpoint: 800,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 1,
+                    slidesToScroll: 2,
                 },
             },
         ],
@@ -57,6 +58,7 @@ const Category = () => {
                             <div className="boxs" key={item.id}>
                                 <div className="box boxItems">
                                     <img src={item.cover} alt="cover" />
+                                    <p>{item.title}</p>
                                 </div>
                             </div>
                         ))}

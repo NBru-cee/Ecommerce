@@ -7,7 +7,7 @@ import { cartActions } from "../../store/cartSlice";
 const ProductCart = ({ id, name, cover, price }) => {
     const dispatch = useDispatch();
     const addToCart = () => {
-        dispatch(cartActions.addToCart(id, name, cover, price));
+        dispatch(cartActions.addToCart({ id, name, cover, price }));
     };
     return (
         <>

@@ -9,7 +9,13 @@ const Product = () => {
             <section className="product">
                 <div className="container grid3">
                     {product.map((item) => (
-                        <ProductCart key={item.id} id={item.id} cover={item.cover} name={item.name} price={item.price} /> 
+                        <ProductCart
+                            key={item.id}
+                            id={item.id}
+                            cover={item.cover}
+                            name={item.name}
+                            price={item.price}
+                        />
                     ))}
                 </div>
             </section>

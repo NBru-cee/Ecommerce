@@ -7,6 +7,7 @@ import { BiLogOut } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { authActions } from "../../store/authSlice";
+
 const User = () => {
     const [profileOpen, setProfileOpen] = useState(false);
     const user = true;
@@ -19,6 +20,7 @@ const User = () => {
         e.preventDefault();
         dispatch(authActions.logout());
     };
+    
     return (
         <>
             <div className="profile">

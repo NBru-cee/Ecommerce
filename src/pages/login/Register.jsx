@@ -2,6 +2,7 @@ import React from "react";
 import back from "../../assets/images/my-account.jpg";
 import { Link } from "react-router-dom";
 import "./login.css";
+
 const Register = () => {
     document.title = "Register";
     return (
@@ -26,7 +27,6 @@ const Register = () => {
                         <span>Confirm Password *</span>
                         <input type="password" required />
                         <button className="button">Register</button>
-                        <Link to="/login">Login</Link>
                     </form>
                 </div>
             </section>
