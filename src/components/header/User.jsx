@@ -5,13 +5,20 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { GrHelp } from "react-icons/gr";
 import { BiLogOut } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { authActions } from "../../store/authSlice";
 const User = () => {
     const [profileOpen, setProfileOpen] = useState(false);
     const user = true;
     const close = () => {
         setProfileOpen(null);
     };
-
+    const dispatch = useDispatch();
+    document.title = "Login";
+    const logoutHandler = (e) => {
+        e.preventDefault();
+        dispatch(authActions.logout());
+    };
     return (
         <>
             <div className="profile">
@@ -65,12 +72,11 @@ const User = () => {
                                     <GrHelp className="icon" />
                                     <h4>Help</h4>
                                 </button>
-                                <Link to="/register">
-                                    <button className="box">
-                                        <BiLogOut className="icon" />
-                                        <h4>Logout</h4>
-                                    </button>
-                                </Link>
+
+                                <button className="box" onClick={logoutHandler}>
+                                    <BiLogOut className="icon" />
+                                    <h4>Logout</h4>
+                                </button>
                             </div>
                         )}
                     </>

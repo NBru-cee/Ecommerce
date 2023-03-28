@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiShoppingBag } from "react-icons/bi";
 import "./header.css";
-import { product } from "../../assets/data/data";
 import CartItems from "./CartItems";
 import { useSelector } from "react-redux";
+
 const Card = () => {
     const [cardOpen, setCardOpen] = useState(false);
     const closeCard = () => {
@@ -14,6 +14,11 @@ const Card = () => {
 
     const cartItems = useSelector((state) => state.cart.itemsList);
 
+    let total = 0;
+    const itemsList = useSelector((state) => state.cart.itemsList);
+    itemsList.forEach((item) => {
+        total += item.totalPrice;
+    });
     return (
         <>
             <div className="card" onClick={() => setCardOpen(!cardOpen)}>
@@ -28,7 +33,7 @@ const Card = () => {
                         <AiOutlineClose className="close" />
                     </button>
                 </div>
-                {product.slice(0, 2).map((item) => (
+                {cartItems.map((item) => (
                     <CartItems
                         key={item.id}
                         cover={item.cover}
@@ -41,7 +46,7 @@ const Card = () => {
                 <div className="checkOut">
                     <button>
                         <span>Priceed To Checkout</span>
-                        <label>$ 240</label>
+                        <label>$ {total}</label>
                     </button>
                 </div>
             </div>

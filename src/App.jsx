@@ -5,19 +5,28 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Register from "./pages/login/Register";
 import Account from "./pages/account/Account";
+import { useSelector } from "react-redux";
+import React from "react";
+
 function App() {
+    const isLoggIn = useSelector((state) => state.auth.isLoggIn);
+
     return (
         <>
-            <Router>
-                <Header />
-                <Routes>
-                    <Route exact path="/" element={<Home />} />
-                    <Route exact path="/register" element={<Register />} />
-                    <Route exact path="/login" element={<Login />} />
-                    <Route exact path="/account" element={<Account />} />
-                </Routes>
-                <Footer />
-            </Router>
+            {isLoggIn && (
+                <Router>
+                    <Header />
+                    <Routes>
+                        <Route exact path="/" element={<Home />} />
+                        <Route exact path="/register" element={<Register />} />
+
+                        <Route exact path="/account" element={<Account />} />
+                    </Routes>
+                    <Footer />
+                </Router>
+            )}
+
+            {!isLoggIn && <Login />}
         </>
     );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/cartSlice";
 
 const ProductCart = ({ id, name, cover, price }) => {
     const dispatch = useDispatch();
