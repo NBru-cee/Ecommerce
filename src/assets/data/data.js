@@ -91,6 +91,8 @@ export const category = [
         cover: "../images/category/ca12.jpg",
     },
 ];
+
+
 export const product = [
     {
         id: 1,

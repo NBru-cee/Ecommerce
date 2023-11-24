@@ -22,9 +22,9 @@ function SamplePrevArrow(props) {
     const { onClick } = props;
     return (
         <div className="control-btn" onClick={onClick}>
-            <div className="prev">
+            <button className="prev">
                 <GrFormPrevious className="icon" />
-            </div>
+            </button>
         </div>
     );
 }
